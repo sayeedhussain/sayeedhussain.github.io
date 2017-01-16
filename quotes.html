@@ -135,9 +135,15 @@
                 document.getElementById("quote").innerHTML = "";
                 document.getElementById("author").innerHTML = ""
 
+                if (counter > 3) {
+                    document.getElementById("quote").innerHTML = "&lt;You are done for now./&gt;"
+                    return;
+                }
+                
                 setTimeout(function () {
                     
-                    if (quotes_json.quotes.length > 0) {
+                    if (quotes_json.quotes.length > 0) {                        
+                        counter = counter + 1;                        
                         var index = getRandomInt(0, quotes_json.quotes.length);
                         var quote = quotes_json.quotes[index];
                         document.getElementById("quote").innerHTML = quote.quote;
@@ -176,7 +182,8 @@
     </body>
     
     <script>    
-        var quotes_json = JSON.parse(Get("https://sayeedhussain.github.io/quotes.json"));            
+        var quotes_json = JSON.parse(Get("https://sayeedhussain.github.io/quotes.json"));
+        var counter = 0;
         refreshQuote();
     </script>
         
