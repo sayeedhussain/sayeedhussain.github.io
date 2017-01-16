@@ -22,14 +22,13 @@
             
 */
             font-weight: 100;
-            font-size: 18px;            
+            font-size: 25px;            
         }
 
         #quote {
         }
         
         #author {
-            color: brown;
         }
                 
         #header {
@@ -59,7 +58,7 @@
         }
                 
         #header-content span {
-            font-size: 50px;
+            font-size: 35px;
             line-height: 120px;
         }
         
@@ -87,7 +86,7 @@
             opacity: 0.8;
             /*Opacity end*/
 
-            background-color: snow;
+            background-color: white;
             color: white;
             position: fixed;
             bottom: 0;
@@ -110,7 +109,7 @@
             border: none;
             margin-top: 10px;
         }
-            
+                    
     </style>
 
     <script>
@@ -136,7 +135,6 @@
                     if (quotes_json.quotes.length > 0) {
                         var index = getRandomInt(0, quotes_json.quotes.length);
                         var quote = quotes_json.quotes[index];
-                        var element = document.getElementById("quote");
                         document.getElementById("quote").innerHTML = quote.quote;
                         document.getElementById("author").innerHTML = "-- " + quote.author;
                     }
@@ -151,7 +149,7 @@
     <body>
             <div id="header">
                 <div id="header-content">
-                    <span style="color: 874C4F">good</span><span style="color: #DB6A4B;">Quotes</span>
+                    <span style="color: 874C4F">good</span><span style="color: #DB6A4B;">quotes</span>
                 </div>
             </div>                  
 
